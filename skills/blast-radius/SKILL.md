@@ -2,7 +2,7 @@
 name: blast-radius
 description: "Find what a change could break outside its diff, and prove the one fact that makes it safe by running real code. Use before shipping or approving a small-looking change you don't fully trust, or when asked 'what could this break' or for the blast radius of a change."
 metadata:
-  adapted-from: "pstack blast-radius, Copyright (c) 2026 Lauren Tan, MIT License, https://github.com/cursor/plugins/tree/main/pstack"
+  adapted-from: "pstack blast-radius, Copyright (c) 2026 Lauren Tan, MIT License, https://github.com/cursor/plugins/tree/519d36aa98955bf680db01bcde5fdfba686dc901/pstack/skills/blast-radius"
 ---
 
 Listing the callers is not the job; grep does that in seconds. The job is the breakage grep won't show. A writeup that sounds right proves nothing: it reads the same whether or not it is true. So find the one or two facts the change's safety rests on and prove them by running code.

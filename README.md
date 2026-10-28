@@ -50,7 +50,7 @@ And some others that seem interesting:
 
 - [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
 - [blader/humanizer](https://github.com/blader/humanizer)
-- [cursor/plugins: pstack](https://github.com/cursor/plugins/tree/main/pstack) by Lauren Tan: Cursor-first, with a Claude Code adapter. `blast-radius` and `correct` here are adapted from it (MIT).
+- [cursor/plugins: pstack](https://github.com/cursor/plugins/tree/519d36aa98955bf680db01bcde5fdfba686dc901/pstack) (pinned at `519d36a`) by Lauren Tan: Cursor-first, with a Claude Code adapter. `blast-radius` and `correct` here are adapted from it (MIT). Its role principles prove-it-works, fix-root-causes, attack-the-premise, test-behavior-not-implementation and in-your-own-words are inlined in `agent-implement`, `agent-review` and `quick-code-review`.
 
 ## License
 

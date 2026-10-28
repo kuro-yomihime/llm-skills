@@ -3,7 +3,7 @@ name: correct
 description: "Repository-wide prevention of mistakes agents keep repeating, not a fix for the current finding: turn each repeated mistake into a check that makes it impossible, with architecture first, then types, then a lint or CI check whose error names the fix, then a behaviour test, docs last. Use when the user asks to /correct, or to stop the same review finding or correction from coming back."
 disable-model-invocation: true
 metadata:
-  adapted-from: "pstack correct, Copyright (c) 2026 Lauren Tan, MIT License, https://github.com/cursor/plugins/tree/main/pstack"
+  adapted-from: "pstack correct, Copyright (c) 2026 Lauren Tan, MIT License, https://github.com/cursor/plugins/tree/519d36aa98955bf680db01bcde5fdfba686dc901/pstack/skills/correct"
 ---
 
 Assume every contributor is an agent that sees only the files it opened, copies the nearest example, and takes the shortest path that compiles. A rule that lives only in prose fails silently whenever an agent skips it. Change the repo so the next agent can't make the mistake.
