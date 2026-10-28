@@ -16,13 +16,13 @@ If you wrote the code under review, say so and recommend an independent reviewer
      - clear, well-named, no duplication
      - errors handled; inputs validated at boundaries
      - no secrets or keys in code or config
-     - tests cover the changed behaviour: each would fail if the behaviour broke, and keep passing if only the internals changed
+     - tests cover the changed behaviour: each would fail if the observable behaviour it asserts broke, and keep passing if only the internals changed. Check return values, externally visible effects, and state read back through the consumer's interface. A mocked external-service payload can be a contract; a private helper's call order usually is not.
      - performance on hot paths
      - bugs and edge cases: empty, null, boundaries, concurrency
      - guards, retries, clamps, swallowed errors: is the state they handle legitimate? If not, they hide a bug
    - **Evidence**: the author's report, green CI, and "it compiles" are claims, not proof the change works. Check the evidence attached for each behaviour change, and re-run the claims that are cheap to re-run; for a bug fix, the repro failing before and passing after. Missing evidence is a finding.
 3. For UI changes, also audit against the `impeccable` anti-patterns.
-4. If a change that looks small touches shared code, a data format, or another service's input, run the `blast-radius` skill on it.
+4. When safety depends on shared code, persisted or wire formats, lifecycle timing, or downstream consumers, run the `blast-radius` skill, whatever the diff's size.
 5. Back each suspected bug with a reproduction, or a file:line and the mechanism behind it. Label anything unconfirmed as a question for the author.
 
 Done when every changed file has been read and every requirement has a verdict.
