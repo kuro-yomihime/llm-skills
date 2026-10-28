@@ -29,6 +29,7 @@ Other targets: `make uninstall`, `make lint`, `make link` (link + prune without 
 | `imperative-commits` | Committing changes, splitting work into commits, writing commit messages |
 | `pr-comments` | Triaging review comments on a GitHub PR / GitLab MR |
 | `pr-babysit` | Watching one PR/MR in the background until merge (hermes, openclaw, local timer, remote host) |
+| `pr-modernize` | Rebasing a stale PR/MR and deciding whether it should still exist (modernize, rework, or close) |
 | `pr-ship` | Finishing a branch: verify green, tidy history, push, open PR |
 | `pr-summary` | Writing a PR summary/description for the current branch |
 | `quick-code-review` | Fast read-only review of uncommitted working-tree changes |
@@ -48,6 +49,17 @@ And some others that seem interesting:
 
 - [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
 - [blader/humanizer](https://github.com/blader/humanizer)
+
+## Credits
+
+Parts of the `pr-*` skills are adapted from Theo Browne's [t3dotgg/tstack](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af) (MIT, revision `1085050`); its copyright and license notice are kept in [LICENSE](LICENSE).
+
+| tstack | here |
+|---|---|
+| `modernize` | `pr-modernize` (close adaptation) |
+| `full-send` (Proof) | `pr-ship` |
+| `file-pr` | `pr-ship`, `pr-summary` |
+| `sol-loop`, `babysit-pr` | `pr-comments`, `pr-babysit` |
 
 ## License
 
