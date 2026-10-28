@@ -50,6 +50,17 @@ And some others that seem interesting:
 - [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
 - [blader/humanizer](https://github.com/blader/humanizer)
 
+## Credits
+
+Parts of the `pr-*` skills are adapted from Theo Browne's [t3dotgg/tstack](https://github.com/t3dotgg/tstack/tree/1085050f3baed1ac724caa4a8166145fb2ac88af) (MIT, revision `1085050`); its copyright and license notice are kept in [LICENSE](LICENSE).
+
+| tstack | here |
+|---|---|
+| `modernize` | `pr-modernize` (close adaptation) |
+| `full-send` (Proof) | `pr-ship` |
+| `file-pr` | `pr-ship`, `pr-summary` |
+| `sol-loop`, `babysit-pr` | `pr-comments`, `pr-babysit` |
+
 ## License
 
 [MIT](LICENSE)
