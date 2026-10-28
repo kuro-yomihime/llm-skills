@@ -13,9 +13,10 @@ Review what is in the working tree right now, not a branch or PR. Report finding
    - no duplicated code
    - errors handled; input validated at boundaries
    - no secrets or keys
-   - tests cover the changed behaviour
+   - tests cover the changed behaviour: each would fail if the behaviour broke, and keep passing if only the internals changed
    - performance on hot paths
    - bugs and edge cases
+   - guards, retries, clamps, swallowed errors: is the state they handle legitimate? If not, they hide a bug
 
 Done when every changed file has been read.
 
