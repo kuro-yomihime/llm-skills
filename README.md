@@ -50,6 +50,7 @@ And some others that seem interesting:
 
 - [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
 - [blader/humanizer](https://github.com/blader/humanizer)
+- [cursor/plugins: pstack](https://github.com/cursor/plugins/tree/main/pstack) by Lauren Tan: Cursor-first, with a Claude Code adapter. `blast-radius` and `correct` here are adapted from it (MIT).
 
 ## License
 
