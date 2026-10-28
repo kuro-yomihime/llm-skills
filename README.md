@@ -26,6 +26,8 @@ Other targets: `make uninstall`, `make lint`, `make link` (link + prune without 
 |---|---|
 | `agent-implement` | Acting as the implementation subagent; executing a plan step by step |
 | `agent-review` | Acting as the independent reviewer/QA subagent |
+| `blast-radius` | Finding what a change could break outside its diff, and proving the fact it is safe because of |
+| `correct` | Turning mistakes agents keep repeating into architecture, type, lint, or CI checks (user-invoked only) |
 | `imperative-commits` | Committing changes, splitting work into commits, writing commit messages |
 | `pr-comments` | Triaging review comments on a GitHub PR / GitLab MR |
 | `pr-babysit` | Watching one PR/MR in the background until merge (hermes, openclaw, local timer, remote host) |
@@ -48,6 +50,7 @@ And some others that seem interesting:
 
 - [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd)
 - [blader/humanizer](https://github.com/blader/humanizer)
+- [cursor/plugins: pstack](https://github.com/cursor/plugins/tree/519d36aa98955bf680db01bcde5fdfba686dc901/pstack) (pinned at `519d36a`) by Lauren Tan: Cursor-first, with a Claude Code adapter. `blast-radius` and `correct` here are adapted from it (MIT). Its role principles prove-it-works, fix-root-causes, attack-the-premise, test-behavior-not-implementation and in-your-own-words are inlined in `agent-implement`, `agent-review` and `quick-code-review`.
 
 ## License
 
