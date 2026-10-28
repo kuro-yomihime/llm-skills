@@ -18,12 +18,13 @@ Every comment gets a verdict before any fix is planned. Reviewers are sometimes 
      - threads: `GET https://<host>/api/v4/projects/<project>/merge_requests/<iid>/discussions?per_page=100`, following the `page` parameter until the result is empty
    If the API answers `401` (glab unauthenticated and no `$GITLAB_TOKEN`), stop and ask the user to run `glab auth login` or export `GITLAB_TOKEN`. Discussions require authentication even on public projects.
 3. For each comment, read the code it points at and decide:
-   - **valid**: the issue is real in the current code
+   - **valid**: the issue is real in the current code and in the change's intended case
+   - **out of scope**: real, but outside the intended case: another path, a rare edge, an extra guard or compatibility layer, a small performance cost, a test the change does not need. Impact sets the class, not the reviewer's label. Note why in one line, and list it as a follow-up.
    - **invalid**: the suggestion is wrong, already handled, or conflicts with the task. Note the reason, with file:line evidence.
    - **unclear**: a question for the author or reviewer
-4. For each valid comment, plan the fix: which file, what change, and how to verify it.
+4. For each valid comment, plan the fix: which file, what change, and how to verify it. Prefer the fix that deletes or narrows code over a new lock, cache, helper, or option; review rounds grow a PR one cheap-looking fix at a time.
 
 Done when every unresolved comment has a verdict.
 
-Report in three groups (valid with planned fix, invalid with reason, unclear with the question to ask), each item linking its comment.
+Report in four groups (valid with planned fix, out of scope as follow-ups, invalid with reason, unclear with the question to ask), each item linking its comment.
 Leave the code unchanged; the user applies the plan, e.g. with `/fix` or through another agent skill.
