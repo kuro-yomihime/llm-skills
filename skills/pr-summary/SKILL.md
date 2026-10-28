@@ -5,8 +5,9 @@ description: "Summarise the current branch as a pull request description with ri
 
 1. Pin the range: `git log --oneline <base>..HEAD` and `git diff --stat <base>...HEAD`. Use `origin/<default>` as the base when the local default branch is stale.
 2. Read the diff itself, not just the commit messages; messages drift from what the code does.
-3. Write the summary:
-   1. **Overview**: what the PR does, in 1–2 sentences.
+3. Write the title: it often becomes the squash-commit message, so follow the repository's convention (recent merged PRs, `git log`) or `imperative-commits`. Name what changes for the user, not the mechanism: `Cut websocket frames by 70% with compression`, not `Negotiate permessage-deflate on the websocket`.
+4. Write the summary:
+   1. **Overview**: the problem in plain words (what was broken or missing, as the user met it), then the fix, in 1–3 sentences. Not a list of edits; those belong under key changes.
    2. **Key changes**: the main files and modifications, as a list.
    3. **Potential risks**: breaking changes, migrations, security concerns. Omit the section if there are none.
    4. **Review recommendations**: where the reviewer should look hardest, and why.
