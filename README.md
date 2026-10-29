@@ -26,6 +26,9 @@ Other targets: `make uninstall`, `make lint`, `make link` (link + prune without 
 |---|---|
 | `agent-implement` | Acting as the implementation subagent; executing a plan step by step |
 | `agent-review` | Acting as the independent reviewer/QA subagent |
+| `burn-window` | Running one scheduled quota window: probe, reconcile menu, dispatch, report |
+| `dispatch` | Launching, verifying, collecting or scrubbing a background agent thread on a remote host |
+| `fleet-hygiene-pass` | Reaping verified dispatch sessions, checking memory and clearing debris on a dispatch host |
 | `imperative-commits` | Committing changes, splitting work into commits, writing commit messages |
 | `pr-comments` | Triaging review comments on a GitHub PR / GitLab MR |
 | `pr-babysit` | Watching one PR/MR in the background until merge (hermes, openclaw, local timer, remote host) |
@@ -33,6 +36,7 @@ Other targets: `make uninstall`, `make lint`, `make link` (link + prune without 
 | `pr-summary` | Writing a PR summary/description for the current branch |
 | `quick-code-review` | Fast read-only review of uncommitted working-tree changes |
 | `quick-fix` | Fixing issues identified earlier in the conversation (user-invoked only) |
+| `review-fix-loop` | Implementer of a large change running independent review rounds until MERGE CLEAN |
 | `visual-code-review` | Rendering a PR/branch review as a step-by-step HTML walkthrough |
 
 ## External skills
